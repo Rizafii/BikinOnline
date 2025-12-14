@@ -11,14 +11,15 @@ import {
 import { Button } from "./ui/button";
 import { ModeToggle } from "./ui/mode-toggle";
 import Link from "next/link";
+import { Menu } from "lucide-react";
 export default function Navbar() {
   return (
     <nav className="w-full bg-background z-20 fixed shadow-sm">
-      <div className="container mx-auto flex items-center justify-between py-6 px-24">
+      <div className="container mx-auto flex items-center justify-between py-6 px-6 lg:px-24">
         <a href="/" className="text-xl">
           BikinOnline
         </a>
-        <div className="nav-item">
+        <div className="nav-item hidden lg:flex">
           <NavigationMenu>
             <NavigationMenuList>
               <NavigationMenuItem>
@@ -35,10 +36,11 @@ export default function Navbar() {
             </NavigationMenuList>
           </NavigationMenu>
         </div>
-        <div className="cta flex items-center gap-4">
+        <div className="cta hidden lg:flex items-center gap-4">
           <ModeToggle />
           <Button variant="default">Hubungi Kami</Button>
         </div>
+        <Menu className="lg:hidden flex" size={18} strokeWidth={2} />
       </div>
     </nav>
   );

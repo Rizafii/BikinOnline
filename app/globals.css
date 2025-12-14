@@ -181,4 +181,18 @@
   body {
     @apply bg-background text-foreground;
   }
+
+  @keyframes zoom {
+    0%,
+    100% {
+      transform: scale(1);
+    }
+    50% {
+      transform: scale(1.05);
+    }
+  }
+}
+
+body::-webkit-scrollbar {
+  display: none;
 }
