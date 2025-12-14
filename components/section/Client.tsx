@@ -40,13 +40,27 @@ const imageLogos = [
 ];
 export default function Client() {
   return (
-    <section className="w-full  -mt-12">
-      <div className="container py-16 px-24  gap-6 items-center justify-center">
+    <section className="w-full bg-primary relative">
+      <div className="wave-atas absolute -top-20 left-0 w-full overflow-hidden ">
+        <svg
+          className="relative block w-full h-15 sm:h-20 md:h-25"
+          viewBox="0 0 1200 120"
+          preserveAspectRatio="none"
+          xmlns="http://www.w3.org/2000/svg"
+        >
+          <path
+            d="M0,0 Q300,60 600,60 T1200,0 L1200,120 L0,120 Z"
+            className="fill-primary"
+          />
+        </svg>
+      </div>
+      <div className="container mx-auto px-24  gap-6 items-center justify-center">
         {/* <p className="text-lg font-medium flex items-center justify-center mb-4">
           Beberapa Klien Kami
         </p> */}
         <div
-          style={{ height: "200px", position: "relative", overflow: "hidden" }}
+          className="relative  h-20 overflow-hidden z-10"
+          // style={{ height: "200px", position: "relative", overflow: "hidden" }}
         >
           {/* Basic horizontal loop */}
           <LogoLoop
@@ -58,10 +72,23 @@ export default function Client() {
             hoverSpeed={0}
             scaleOnHover
             fadeOut
-            fadeOutColor="#faf7f5"
+            fadeOutColor="#9b2c2c"
             ariaLabel="Technology partners"
           />
         </div>
+      </div>
+      <div className="wave-bawah absolute  -bottom-20 left-0 w-full overflow-hidden ">
+        <svg
+          className="relative block w-full h-15 sm:h-20 md:h-25"
+          viewBox="0 0 1200 120"
+          preserveAspectRatio="none"
+          xmlns="http://www.w3.org/2000/svg"
+        >
+          <path
+            d="M0,120 Q300,60 600,60 T1200,120 L1200,0 L0,0 Z"
+            className="fill-primary"
+          />
+        </svg>
       </div>
     </section>
   );
